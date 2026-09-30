@@ -39,6 +39,17 @@ The output is a GHCP-oriented migration package that can be used to create or up
 | **Cowork cloud app** | Best for cloud/plugin use with already-generated artifacts or Builder/API flows. |
 | **CLI / automation** | Best for scripted detect, analyze, generate, install, and create steps. |
 
+## Download packages
+
+This repository includes ready-to-use ZIP packages under `packages\`.
+
+| Package | Use for |
+| --- | --- |
+| `packages\ghcp-agent-migrator-code.zip` | Copilot Code / Code tab |
+| `packages\ghcp-agent-migrator-cowork.zip` | Cowork cloud app upload |
+
+Use the ZIP that matches your runtime. Do not upload the Code ZIP as a Cowork app, and do not unzip the Cowork ZIP into Code.
+
 ## Repository layout
 
 ```text
@@ -96,7 +107,13 @@ Reload Scout, then run:
 
 ## Use in Copilot Code
 
-Add this repository to your Code workspace. The Code skill entry point is:
+Use:
+
+```text
+packages\ghcp-agent-migrator-code.zip
+```
+
+Unzip it into the Code workspace or repository root. The Code skill entry point is:
 
 ```text
 ghcp-agent-migrator\SKILL.md
@@ -118,16 +135,10 @@ The detailed migration workflow is inside the skill. Users should not need to pa
 
 ## Use as a Cowork plugin
 
-Build the uploadable Cowork package:
-
-```powershell
-npm run package-cowork
-```
-
-Upload:
+Upload this ZIP directly:
 
 ```text
-dist\ghcp-agent-migrator-cowork.zip
+packages\ghcp-agent-migrator-cowork.zip
 ```
 
 Cowork is cloud-based, so it may not be able to run local clone, push, npm, or filesystem workflows. In Cowork, use the skill with attached or pre-generated artifacts such as:

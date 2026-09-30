@@ -1,0 +1,28 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.28/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.28",
+  "version": "0.2.0",
+  "id": "9c13c159-bbd1-437a-a6d0-a655cd7c8c6f",
+  "developer": {
+    "name": "Community sample",
+    "websiteUrl": "https://github.com/<your-org>/copilot-studio-ghcp-agent-rearchitect-skill",
+    "privacyUrl": "https://github.com/<your-org>/copilot-studio-ghcp-agent-rearchitect-skill/blob/main/PRIVACY.md",
+    "termsOfUseUrl": "https://github.com/<your-org>/copilot-studio-ghcp-agent-rearchitect-skill/blob/main/TERMS.md"
+  },
+  "name": {
+    "short": "GHCP Migrator",
+    "full": "Copilot Studio GHCP Agent Migrator"
+  },
+  "description": {
+    "short": "Migrate Standard harness agents into GHCP harness agents.",
+    "full": "Sample Code/Cowork skill that helps developers migrate and rearchitect Copilot Studio Standard harness agents into GitHub Copilot / GHCP harness agent designs by extracting source artifacts, resource inventory, NLA prompts, behavior skills, tool designs, and installable GHCP scaffold files."
+  },
+  "icons": {
+    "color": "color.png",
+    "outline": "outline.png"
+  },
+  "accentColor": "#5C2D91",
+  "agentSkills": [
+    { "folder": "./skills/ghcp-agent-migrator" }
+  ]
+}
